@@ -35,42 +35,46 @@ public class Add extends Main {
 	            
 				System.out.println(" Name             -  : ");
 	            String name1 = scan.nextLine();
-				address_book.add (name1);
+				address_book.add(count, name1);
 //				_strupr(address_book[count].name);
 	    
 	  		    
 	  		    System.out.println() ;
 	  		    System.out.println(" Address          -  : ");
 	            String address1 = scan.nextLine();
-				address_book.add (address1);
+				address_book.add(count+1, address1);
 	            //DO NOT CONVERT THE E-MAIL ADDRESS AS IT IS CASE SENSITIVE !
 	            			
 				System.out.println() ;
 				System.out.println(" Sex              -  : ");
 	            String sex1 = scan.nextLine();
-				address_book.add (sex1);
+				address_book.add(count+2, sex1);
 //		   		_strupr(address_book[count].sex);
 
 			    
 			    System.out.println();
 			    System.out.println(" Age              -  : ");
 	            String age1 = scan.nextLine();
-				address_book.add (age1);
+				address_book.add(count+3, age1);
 //	   			_strupr(address_book[count].age);
 
 	            
 	            System.out.println() ;
 	            System.out.println(" Phone Number     -  : ");
 	            String phone1 = scan.nextLine();
-				address_book.add (phone1);
+				address_book.add(count+4, phone1);
 //	   			_strupr(address_book[count].phone);
 
 	            
 	            System.out.println(); 
 	            System.out.println(" Date of Birth    -  : ");
 	            String birthday1 = scan.nextLine();
-				address_book.add (birthday1);
+				address_book.add(count+5, birthday1);
 //	   			_strupr(address_book[count].birthday);
+				
+				///////////////////////////////////////////////////////
+				//   Need to add the current time stamp as a field   //
+				///////////////////////////////////////////////////////
 
 	   			System.out.println(name1 + address1 + sex1 + age1 + phone1 + birthday1);
 	   			System.out.println(address_book);

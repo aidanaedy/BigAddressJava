@@ -22,7 +22,7 @@ public class Menu {
 					//Delete ();            //dec of Delete func
 	                break;
 			   case 3:
-					//Display ( count);      //dec of Display func
+					Display.display(count);      //dec of Display func
 	          	    break; 
 	           case 4:
 	          	    //Find (users_choice2); //dec of Find menu
