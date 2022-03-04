@@ -1,25 +1,29 @@
 package com.aa.bigass;
 
+import java.io.IOException;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 
-//import java.util.Scanner;
-
-	public class Main {
+public class Main {
 		
 		
-		 static ArrayList<String> address_book = new ArrayList<String>();
-		 char  name1     [];
-	  	 char  address1  [];
-	  	 char  sex1      [];
-	  	 char  age1      [];
-	  	 char  phone1    [];
-	  	 char  birthday1 [];
+		static ArrayList<String> address_book = new ArrayList<>();
+		//static int count = 0;
 
-		public static void main(String[] args) {
+		 static String  name1;
+		 static String  address1;
+		 static String  sex1;
+		 static String  age1;
+		 static String  phone1;
+		 static String  birthday1;
+		 static ZonedDateTime	date1;
+	  	 
+
+		public static void main(String[] args) throws IOException {
 			int users_choice = 0;
 
 			
-			//filein (count);    
+			FileIn.fileIn();    
 			Credits.credits();
 			
 			do
@@ -38,15 +42,15 @@ import java.util.ArrayList;
 				
 			}  
 			while (users_choice != 5);
-			//system("cls");
-			System.out.println("        Thank You For Using The ADDRESS BOOK..");
+
+			
+
+		
+			System.out.println("         Thank You For Using The ADDRESS BOOK");
 			Credits.credits();
 			System.out.println();
 			System.out.println("          You Will Now Return To The Console.")	;
+			FileOut.fileOut();
 		  }
 
-
-		
-	}
-
-
+}
