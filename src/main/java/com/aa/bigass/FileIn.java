@@ -3,53 +3,55 @@ package com.aa.bigass;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
-import java.util.Objects;
+import lombok.Data;
 
-class FileIn extends Main {
+@Data
 
-	// *******************************************************************
+class FileIn  {
+
+	// **********************************************************************
 
 	/*************************** FILE INPUT START **********************/
 
-	// *******************************************************************
+	// **********************************************************************
 
 	static void fileIn() {
 
 		try {
-
-			// String line;
-
+			
+			// using BufferedReader to read in the file one line (entry) at a time
 			BufferedReader reader1 = new BufferedReader(new FileReader("bigdos.in"));
 
-			for (String line; (line = reader1.readLine()) != null;) {
+					do {
 
-				String name1 = reader1.readLine();
-				address_book.add(name1);
+				String setName1 = reader1.readLine();
+				Main.address_book.add(setName1);
 
-				String address1 = reader1.readLine();
-				address_book.add(address1);
+				String setAddress1 = reader1.readLine();
+				Main.address_book.add(setAddress1);
 
-				String sex1 = reader1.readLine();
-				address_book.add(sex1);
+				String setSex1 = reader1.readLine();
+				Main.address_book.add(setSex1);
 
-				String age1 = reader1.readLine();
-				address_book.add(age1);
+				String setAge1 = reader1.readLine();
+				Main.address_book.add(setAge1);
 
-				String phone1 = reader1.readLine();
-				address_book.add(phone1);
+				String setPhone1 = reader1.readLine();
+				Main.address_book.add(setPhone1);
 
-				String birthday1 = reader1.readLine();
-				address_book.add(birthday1);
+				String setBirthday1 = reader1.readLine();
+				Main.address_book.add(setBirthday1);
 
-				String date1 = reader1.readLine();
-				address_book.add(date1);
+				String setDate1 = reader1.readLine();
+				Main.address_book.add(setDate1);
 
-				count.count++;
+				// and then increment the counter for each additional entry
+				Count.count++;
 
 			}
 
-			// while ((reader1.readLine()) != null);
+			 while ((reader1.readLine()) != null);
+			// close the reader when done
 			reader1.close();
 
 		} catch (
@@ -60,17 +62,15 @@ class FileIn extends Main {
 			e.printStackTrace();
 		}
 
-		// I do not know why, but I am getting an extra set of null values at the end so
-		// I am having to remove them below
+		// I do not know why, but I am getting an extra set of null values at the end - to do
 
 
-		// address_book.remove("Name - ");
 
-		count.count++;
+		Count.count++;
 
 		// The below sys.out will be removed but are just a check of the collected data
-		System.out.println(address_book);
-		System.out.println(count.count);
+		System.out.println(Main.address_book);
+		System.out.println(Count.count);
 	}
 
 }
@@ -78,9 +78,3 @@ class FileIn extends Main {
  * * END FILE IN FUNC. *
  ***************************************************************/
 
-/*
- * --- to try at some point in the future --- Stream<String> inputFile =
- * Files.lines(Paths.get("bigdos.in")); inputFile .sorted() .filter(.filter(x ->
- * x.length() > 13) .forEach(System.out::println); inputFile.close();
- * 
- */

@@ -1,12 +1,12 @@
 package com.aa.bigass;
 
-public class count {
+public class Count {
 	
 	static int count;
 	
-	public count() {
-		super();
-		// TODO Auto-generated constructor stub
+	public void count() {
+
+		// this is just to create a global counter used throughout the program, will change for getters and setters
 	}
 
 

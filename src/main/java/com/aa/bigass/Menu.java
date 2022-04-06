@@ -2,14 +2,12 @@ package com.aa.bigass;
 
 import java.util.Scanner;
 
-public class Menu extends Main{
+public class Menu {
 	
-	 public static int menu(int users_choice) // to select one of the listed func.
+	// to select one of the listed functions.
+	 public static int menu(int users_choice) 
 	  
 	  {      
-		 	
-		 
-
 		 	
 			Scanner scan = new Scanner(System.in);
 			System.out.println( "Your Choice of Menu is:- #");
@@ -19,23 +17,34 @@ public class Menu extends Main{
 	         switch (users_choice)
 	         { 
 	           case 1:
-					Add.Add ();          	//dec of Add func
+	        	 //add function to add new entries
+					Add.add ();          	           
 	                break;
 	           case 2:
-					//Delete ();            //dec of Delete func
+	        	 //delete function is to be added here
+					//delete ();                         
 	                break;
 			   case 3:
-					Display.display();      //dec of Display func
+				 //display function to show all the entries
+					Display.display();              
 	          	    break; 
 	           case 4:
-	          	    //Find (users_choice2); //dec of Find menu
+	        	 //find menu function is to be added here
+	          	    //Find (users_choice2);    
 	          	    break;
 	           case 5:
-	        	   	return users_choice = 5;
+	        	// to exit the menu and system
+	        	   	return users_choice = 5;  
 	           default:  System.out.println("You Have Made An Incorrect Choice");	 
 	         
 	         }
-			System.out.println(count.count);
+	         // close the scanner
+	         scan.close();
+	         
+	        // to be removed eventually, just for debugging
+			System.out.println(Count.count);
+			
+			// to return the value of the menu decision
 			return users_choice;
 	  
 	  }//**********************  END MAIN MENU FUNC. *********************

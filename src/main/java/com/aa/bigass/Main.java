@@ -1,29 +1,30 @@
 package com.aa.bigass;
 
 import java.io.IOException;
-import java.time.ZonedDateTime;
 import java.util.ArrayList;
 
+import lombok.Data;
+
+@Data
+
 public class Main {
+	
+	// these will be moved to a data class to clean the main class
+	static ArrayList<String> address_book = new ArrayList<>();
+	private String  name1;
+	private String  address1;
+	private String  sex1;
+	private String  age1;
+	private String  phone1;
+	private String  birthday1;
+	private String	date1;
 		
-		
-		static ArrayList<String> address_book = new ArrayList<>();
-		//static int count = 0;
-
-		 static String  name1;
-		 static String  address1;
-		 static String  sex1;
-		 static String  age1;
-		 static String  phone1;
-		 static String  birthday1;
-		 static ZonedDateTime	date1;
-	  	 
-
-		public static void main(String[] args) throws IOException {
+			public static void main(String[] args) throws IOException {
 			int users_choice = 0;
 
-			
+			// calling the FileIn java file to read the stored data
 			FileIn.fileIn();    
+			// calling the Credits java file to display the credits at the start
 			Credits.credits();
 			
 			do
@@ -39,17 +40,18 @@ public class Main {
 				System.out.println( "5.| To Exit From The Program.");
 
 				users_choice =  Menu.menu(users_choice);
-				
 			}  
+			// when the choice is 5, exit the program
 			while (users_choice != 5);
 
 			
-
-		
+			// ending messages etc.
 			System.out.println("         Thank You For Using The ADDRESS BOOK");
+			// calling the Credits java file to display the credits at the end
 			Credits.credits();
 			System.out.println();
 			System.out.println("          You Will Now Return To The Console.")	;
+			// calling the FileOut java file to store the data
 			FileOut.fileOut();
 		  }
 

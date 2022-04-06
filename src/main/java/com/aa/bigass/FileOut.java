@@ -4,21 +4,22 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileOut extends Main {
+public class FileOut {
 
+	// this class outputs the amended data back to the text file (currently a separate file but will be the input file when ready)
 	static void fileOut() {
 		int poo;
 
 		try {
+			// open the file
 			BufferedWriter writer1 = new BufferedWriter(new FileWriter("output.txt"));
-			//writer1.write(count.count + "             - # of Entries.");
 
-			for (poo = 0; poo < address_book.size(); poo++) {
-				writer1.append(address_book.get(poo) + "\n");
-				
-				
-
+			// write the data
+			for (poo = 0; poo < Main.address_book.size(); poo++) {
+				writer1.append(Main.address_book.get(poo) + "\n");
+	
 			}
+			// close the writer
 			writer1.close();
 		} catch (IOException e) {
 			e.printStackTrace();

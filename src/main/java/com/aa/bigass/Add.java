@@ -1,11 +1,19 @@
 package com.aa.bigass;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.ZonedDateTime;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
 
-public class Add extends Main {
+import lombok.Data;
+
+@Data
+
+public class Add {
 	
-	public static int Add() {
+	public static int add() {
 		
 		
 	      /****************************************************************
@@ -19,11 +27,11 @@ public class Add extends Main {
 
 		System.out.println(); 	
 		System.out.println("********************************************************" );
-		System.out.println(count.count); 
+		System.out.println(Count.count); 
 		System.out.println(); 
 	      
 	    
-	      groo=(count.count+1);
+	      groo=(Count.count+1);
 	       
 			System.out.println("Please input the persons details for:-") ;
 			System.out.println("Name," +  "Address," +  "Sex," + "Age, "); 
@@ -34,55 +42,56 @@ public class Add extends Main {
 	                     THIS IS THE MAIN INPUT SECTION
 	        -----------------------------------------------------------*/              
 	            
+				// taking in the details one at a time and adding them to the address book
+			
 				System.out.println("\n Name             -  : ");
 	            String name1 = scan.nextLine();
-				address_book.add(name1);
+	            Main.address_book.add("Name          - " + name1);
 	  		    
 	  		    System.out.println() ;
 	  		    System.out.println("\n Address          -  : ");
 	            String address1 = scan.nextLine();
-				address_book.add(address1);
+	            Main.address_book.add("Address       - " + address1);
 	            //DO NOT CONVERT THE E-MAIL ADDRESS AS IT IS CASE SENSITIVE !
 	            			
 				System.out.println() ;
 				System.out.println("\n Sex              -  : ");
 	            String sex1 = scan.nextLine();
-				address_book.add(sex1);
+	            Main.address_book.add("Sex           - " + sex1);
 			    
 			    System.out.println();
 			    System.out.println("\n Age              -  : ");
 	            String age1 = scan.nextLine();
-				address_book.add(age1);
+	            Main.address_book.add("Age           - " + age1);
 	            
 	            System.out.println() ;
-	            System.out.println("\n Phone Number     -  : ");
+	            System.out.println("\n Phone        - : ");
 	            String phone1 = scan.nextLine();
-				address_book.add(phone1);
+	            Main.address_book.add("Phone         - " + phone1);
 	            
 	            System.out.println(); 
 	            System.out.println("\n Date of Birth    -  : ");
 	            String birthday1 = scan.nextLine();
-				address_book.add(birthday1);
+	            Main.address_book.add("Date of Birth - " + birthday1);
 				
-				//Date of File  - 
+				//Date of File added by the system
 				System.out.println("\n Date of File  - ");
-				date1 = dateTime;
-				//String date1 = scan.nextLine();
+				String pattern = "dd/MM/yy HH:mm:ss";
+				DateFormat df = new SimpleDateFormat(pattern);
+				Date today = Calendar.getInstance().getTime();        
+				String date1 = df.format(today);
+				Main.address_book.add("Date of File  - " + date1);
 
-				
-				
-				///////////////////////////////////////////////////////
-				//   Need to add the current time stamp as a field   //
-				///////////////////////////////////////////////////////
 
-	   			System.out.println(name1 + address1 + sex1 + age1 + phone1 + birthday1);
-	   			System.out.println(address_book);
+				//this is debugging output and will be removed soon
+	   			System.out.println(name1 + address1 + sex1 + age1 + phone1 + birthday1 + date1);
+	   			System.out.println(Main.address_book);
 	   			
 			System.out.println( "You will now return to the MAIN MENU. ");
 			System.out.println();
 			System.out.println();
-			count.count++;
-	  	    return count.count;
+			Count.count++;
+	  	    return Count.count;
 	}
 
 

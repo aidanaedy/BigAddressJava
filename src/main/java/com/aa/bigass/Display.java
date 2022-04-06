@@ -2,13 +2,13 @@ package com.aa.bigass;
 
 import java.util.Scanner;
 
-public class Display extends Main{
+public class Display {
 	
 	
 	   /*********************************************************************
 	   *************************  Display Function   ************************
 	   *********************************************************************/
-	            
+	 // this method displays all the entries one person at a time until the last
 	 static void display () 
 	   {
 		   int poo;
@@ -16,32 +16,35 @@ public class Display extends Main{
 		   
 			Scanner scan = new Scanner(System.in);
 			System.out.println();
-			System.out.println("***   This is the " + sloo+1 + " of " + count.count + " of your Address's stored.   ***");
+			System.out.println("***   This is the " + sloo+1 + " of " + Count.count + " of your Address's stored.   ***");
 
-
-	   for (poo=0;poo<count.count*6;poo++)
+		//looping through each persons name, age address etc.
+	   for (poo=0;poo<Count.count*6;poo++)
 	    {	
-			System.out.println("Name          - " + address_book.get(poo));
+			System.out.println("Name          - " + Main.address_book.get(poo));
 
-			System.out.println("Address       - " + address_book.get(poo+1));
+			System.out.println("Address       - " + Main.address_book.get(poo+1));
 
-			System.out.println("Sex           - " + address_book.get(poo+2));
+			System.out.println("Sex           - " + Main.address_book.get(poo+2));
 
-			System.out.println("Age           - " + address_book.get(poo+3));
+			System.out.println("Age           - " + Main.address_book.get(poo+3));
 	   		
-			System.out.println("Phone         - " + address_book.get(poo+4));
+			System.out.println("Phone         - " + Main.address_book.get(poo+4));
 
-			System.out.println("Date of Birth - " + address_book.get(poo+5));
+			System.out.println("Date of Birth - " + Main.address_book.get(poo+5));
 			
-			System.out.println("Date of File  - " + address_book.get(poo+6));
+			System.out.println("Date of File  - " + Main.address_book.get(poo+6));
 			poo = poo + 6;
 			sloo++;
 
+			// pausing for a prompt before outputting the next person
 			System.out.println( ".......Are you ready for Another ?.......");
 			String dummy = scan.nextLine();
 			System.out.println();
 	    }
 		System.out.println("That was the last Entry.......");
+		
+		// exiting back to the menu after the last entry
 		System.out.println("You will now return to the MAIN MENU. "); 	
 		poo = 0;
 		sloo = 0;
