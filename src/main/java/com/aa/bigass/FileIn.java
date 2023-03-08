@@ -3,11 +3,11 @@ package com.aa.bigass;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import lombok.Data;
+// import lombok.Data;
 
-@Data
+// @Data
 
-class FileIn  {
+class FileIn {
 
 	// **********************************************************************
 
@@ -18,11 +18,11 @@ class FileIn  {
 	static void fileIn() {
 
 		try {
-			
+
 			// using BufferedReader to read in the file one line (entry) at a time
 			BufferedReader reader1 = new BufferedReader(new FileReader("bigdos.in"));
 
-					do {
+			do {
 
 				String setName1 = reader1.readLine();
 				Main.address_book.add(setName1);
@@ -50,7 +50,7 @@ class FileIn  {
 
 			}
 
-			 while ((reader1.readLine()) != null);
+			while ((reader1.readLine()) != null);
 			// close the reader when done
 			reader1.close();
 
@@ -62,9 +62,8 @@ class FileIn  {
 			e.printStackTrace();
 		}
 
-		// I do not know why, but I am getting an extra set of null values at the end - to do
-
-
+		// I do not know why, but I am getting an extra set of null values at the end -
+		// to do
 
 		Count.count++;
 
@@ -77,4 +76,3 @@ class FileIn  {
 /***************************************************************
  * * END FILE IN FUNC. *
  ***************************************************************/
-
