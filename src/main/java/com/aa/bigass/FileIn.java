@@ -3,9 +3,6 @@ package com.aa.bigass;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-// import lombok.Data;
-
-// @Data
 
 class FileIn {
 
@@ -16,6 +13,7 @@ class FileIn {
 	// **********************************************************************
 
 	static void fileIn() {
+		int count = Count.getCount();
 
 		try {
 
@@ -46,7 +44,7 @@ class FileIn {
 				Main.address_book.add(setDate1);
 
 				// and then increment the counter for each additional entry
-				Count.count++;
+				count++;
 
 			}
 
@@ -65,11 +63,11 @@ class FileIn {
 		// I do not know why, but I am getting an extra set of null values at the end -
 		// to do
 
-		Count.count++;
+		Count.setCount(count);
 
 		// The below sys.out will be removed but are just a check of the collected data
 		System.out.println(Main.address_book);
-		System.out.println(Count.count);
+		System.out.println(Count.getCount());
 	}
 
 }

@@ -43,7 +43,7 @@ public class Menu {
 		scan.close();
 
 		// to be removed eventually, just for debugging
-		System.out.println(Count.count);
+		System.out.println(Count.getCount());
 
 		// to return the value of the menu decision
 		return users_choice;

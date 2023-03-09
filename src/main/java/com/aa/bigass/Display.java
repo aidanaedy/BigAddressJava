@@ -11,13 +11,14 @@ public class Display {
 	static void display() {
 		int poo;
 		int sloo = 0;
+		int count = Count.getCount();
 
 		Scanner scan = new Scanner(System.in);
 		System.out.println();
-		System.out.println("***   This is the " + sloo + 1 + " of " + Count.count + " of your Address's stored.   ***");
+		System.out.println("***   This is the " + sloo + 1 + " of " + count + " of your Address's stored.   ***");
 
 		// looping through each persons name, age address etc.
-		for (poo = 0; poo < Count.count * 6; poo++) {
+		for (poo = 0; poo < count * 6; poo++) {
 			System.out.println(Main.address_book.get(poo));
 
 			System.out.println(Main.address_book.get(poo + 1));
@@ -38,7 +39,7 @@ public class Display {
 			System.out.println(".......Are you ready for Another ?.......");
 			String dummy = scan.nextLine();
 			System.out.println();
-			scan.close();
+			//scan.close();
 		}
 		System.out.println("That was the last Entry.......");
 
@@ -46,6 +47,7 @@ public class Display {
 		System.out.println("You will now return to the MAIN MENU. ");
 		poo = 0;
 		sloo = 0;
+		scan.close();
 
 	} // *********************** END DISPLAY FUNC. **********************
 

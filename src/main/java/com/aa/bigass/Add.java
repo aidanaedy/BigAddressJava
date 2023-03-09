@@ -2,33 +2,31 @@ package com.aa.bigass;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.ZonedDateTime;
+//import java.time.ZonedDateTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
-// import lombok.Data;
-
-// @Data
 
 public class Add {
 
-	public static int add() {
+	public static void add() {
 
 		/****************************************************************
 		 ********************** Add Function ********************
 		 ****************************************************************/
 		int groo;
-		String get;
-		ZonedDateTime dateTime = ZonedDateTime.now();
+		int count = Count.getCount();
+		//String get;
+		//ZonedDateTime dateTime = ZonedDateTime.now();
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println();
 		System.out.println("********************************************************");
-		System.out.println(Count.count);
+		System.out.println(Count.getCount());
 		System.out.println();
 
-		groo = (Count.count + 1);
+		groo = (count + 1);
 
 		System.out.println("Please input the persons details for:-");
 		System.out.println("Name," + "Address," + "Sex," + "Age, ");
@@ -86,8 +84,10 @@ public class Add {
 		System.out.println("You will now return to the MAIN MENU. ");
 		System.out.println();
 		System.out.println();
-		Count.count++;
-		return Count.count;
+		count++;
+		Count.setCount(count); 
+		scan.close();
+		
 	}
 
 }

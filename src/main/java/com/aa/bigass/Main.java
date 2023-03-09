@@ -3,21 +3,17 @@ package com.aa.bigass;
 import java.io.IOException;
 import java.util.ArrayList;
 
-// import lombok.Data;
-
-// @Data
-
 public class Main {
 
 	// these will be moved to a data class to clean the main class
 	static ArrayList<String> address_book = new ArrayList<>();
-	private String name1;
-	private String address1;
-	private String sex1;
-	private String age1;
-	private String phone1;
-	private String birthday1;
-	private String date1;
+//	private String name1;
+//	private String address1;
+//	private String sex1;
+//	private String age1;
+//	private String phone1;
+//	private String birthday1;
+//	private String date1;
 
 	public static void main(String[] args) throws IOException {
 		int users_choice = 0;
