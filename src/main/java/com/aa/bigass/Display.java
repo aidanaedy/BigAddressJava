@@ -39,7 +39,7 @@ public class Display {
 			System.out.println(".......Are you ready for Another ?.......");
 			String dummy = scan.nextLine();
 			System.out.println();
-			//scan.close();
+			// scan.close();
 		}
 		System.out.println("That was the last Entry.......");
 

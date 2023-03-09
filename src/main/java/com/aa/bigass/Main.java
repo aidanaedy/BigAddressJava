@@ -5,15 +5,8 @@ import java.util.ArrayList;
 
 public class Main {
 
-	// these will be moved to a data class to clean the main class
+	// this will be moved to a data class to clean the main class
 	static ArrayList<String> address_book = new ArrayList<>();
-//	private String name1;
-//	private String address1;
-//	private String sex1;
-//	private String age1;
-//	private String phone1;
-//	private String birthday1;
-//	private String date1;
 
 	public static void main(String[] args) throws IOException {
 		int users_choice = 0;
@@ -22,9 +15,10 @@ public class Main {
 		FileIn.fileIn();
 		// calling the Credits java file to display the credits at the start
 		Credits.credits();
+		int count = Count.getCount();
 
 		do {
-			System.out.println();
+			System.out.println("The Database has " + count + " entries");
 			System.out.println();
 			System.out.println("*** Enter Your Choice of Menu ***");
 			System.out.println("    -------------------------    ");

@@ -5,24 +5,13 @@ import java.io.FileReader;
 import java.io.IOException;
 
 class FileIn {
-
-	// **********************************************************************
-
 	/*************************** FILE INPUT START **********************/
-
-	// **********************************************************************
-
 	static void fileIn() {
 		int count = Count.getCount();
-
 		try {
-
 			// using BufferedReader to read in the file one line (entry) at a time
 			BufferedReader reader1 = new BufferedReader(new FileReader("bigdos.in"));
-
-			do {
-
-				String setName1 = reader1.readLine();
+			for (String setName1 = reader1.readLine(); setName1 != null; setName1 = reader1.readLine()) {
 				Main.address_book.add(setName1);
 
 				String setAddress1 = reader1.readLine();
@@ -44,32 +33,20 @@ class FileIn {
 				Main.address_book.add(setDate1);
 
 				// and then increment the counter for each additional entry
-				count++;
-
+				count = count + 1;
+				System.out.println("The count at filein loop is " + (count) + "Name is " + setName1);
 			}
-
-			while ((reader1.readLine()) != null);
 			// close the reader when done
 			reader1.close();
-
-		} catch (
-
-		IOException e) {
+			// count--;
+		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (NullPointerException e) {
 			e.printStackTrace();
 		}
-
-		// I do not know why, but I am getting an extra set of null values at the end -
-		// to do
-
+		System.out.println("The count at filein is " + (count));
 		Count.setCount(count);
-
-		// The below sys.out will be removed but are just a check of the collected data
-		System.out.println(Main.address_book);
-		System.out.println(Count.getCount());
 	}
-
 }
 /***************************************************************
  * * END FILE IN FUNC. *

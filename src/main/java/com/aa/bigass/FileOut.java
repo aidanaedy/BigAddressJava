@@ -18,13 +18,15 @@ public class FileOut {
 			// write the data
 			for (poo = 0; poo < Main.address_book.size(); poo++) {
 				writer1.append(Main.address_book.get(poo) + "\n");
-				writer1.close();
+				// writer1.close();
 			}
 			// close the writer
 			writer1.close();
 		} catch (IOException e) {
+
 			e.printStackTrace();
 		}
 	}
+
 	// *********************** END File Out FUNC. **********************
 }
