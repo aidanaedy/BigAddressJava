@@ -9,16 +9,16 @@ public class Display {
 	 *********************************************************************/
 	// this method displays all the entries one person at a time until the last
 	static void display() {
-		int poo;
-		int sloo = 0;
+		int poo = 0;
+		int sloo = 1;
 		int count = Count.getCount();
 
 		Scanner scan = new Scanner(System.in);
 		System.out.println();
-		System.out.println("***   This is the " + sloo + 1 + " of " + count + " of your Address's stored.   ***");
+		System.out.println("***   This is the " + sloo + " of " + count + " of your Address's stored.   ***");
 
 		// looping through each persons name, age address etc.
-		for (poo = 0; poo < count * 6; poo++) {
+		while (sloo < (count + 1)) {
 			System.out.println(Main.address_book.get(poo));
 
 			System.out.println(Main.address_book.get(poo + 1));
@@ -32,11 +32,12 @@ public class Display {
 			System.out.println(Main.address_book.get(poo + 5));
 
 			System.out.println(Main.address_book.get(poo + 6));
-			poo = poo + 6;
+
+			System.out.println("     Entry Number: " + sloo + ".......Are you ready for Another ?.......");
 			sloo++;
+			poo = poo + 7;
 
 			// pausing for a prompt before outputting the next person
-			System.out.println(".......Are you ready for Another ?.......");
 			String dummy = scan.nextLine();
 			System.out.println();
 			// scan.close();
