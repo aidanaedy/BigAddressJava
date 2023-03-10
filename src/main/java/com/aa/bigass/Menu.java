@@ -12,26 +12,23 @@ public class Menu {
 		Data.setusers_choice(user_scan.nextInt());
 		// Data.setusers_choice(Integer.parseInt(System.console().readLine()));
 		int userChoice = Data.getusers_choice();
+		user_scan.close();
 		System.out.println();
 
 		switch (userChoice) {
 			case 1:
 				// add function to add new entries
-				user_scan.close();
 				Add.add();
 				break;
 			case 2:
 				// delete function is to be added here
-				user_scan.close();
 				break;
 			case 3:
 				// display function to show all the entries
 				Display.display();
-				user_scan.close();
 				break;
 			case 4:
 				// find menu function is to be added here
-				user_scan.close();
 				break;
 			case 5:
 				// to exit the menu and system
@@ -39,7 +36,6 @@ public class Menu {
 				break;
 			default:
 				System.out.println("You Have Made An Incorrect Choice");
-				user_scan.close();
 		}
 	}// ********************** END MAIN MENU FUNC. *********************
 }

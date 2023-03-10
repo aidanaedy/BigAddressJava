@@ -13,7 +13,7 @@ public class Display {
 		int sloo = 1;
 		int count = Data.getCount();
 
-		Scanner scan = new Scanner(System.in);
+		Scanner pause = new Scanner(System.in);
 		System.out.println();
 		System.out.println("***   This is the " + sloo + " of " + count + " of your Address's stored.   ***");
 
@@ -38,8 +38,10 @@ public class Display {
 			poo = poo + 7;
 
 			// pausing for a prompt before outputting the next person
-			scan.nextLine();
+			// System.console().readLine();
+			pause.nextLine();
 			System.out.println();
+
 		}
 		System.out.println("That was the last Entry.......");
 
@@ -47,7 +49,7 @@ public class Display {
 		System.out.println("You will now return to the MAIN MENU. ");
 		poo = 0;
 		sloo = 0;
-		scan.close();
+		pause.close();
 
 	} // *********************** END DISPLAY FUNC. **********************
 
