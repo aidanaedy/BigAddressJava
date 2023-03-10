@@ -16,8 +16,8 @@ public class FileOut {
 			BufferedWriter writer1 = new BufferedWriter(new FileWriter("output.txt"));
 
 			// write the data
-			for (poo = 0; poo < Main.address_book.size(); poo++) {
-				writer1.append(Main.address_book.get(poo) + "\n");
+			for (poo = 0; poo < Data.address_book.size(); poo++) {
+				writer1.append(Data.address_book.get(poo) + "\n");
 				// writer1.close();
 			}
 			// close the writer
