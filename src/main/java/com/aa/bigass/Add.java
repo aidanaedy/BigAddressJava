@@ -41,33 +41,33 @@ public class Add {
 
 		System.out.println("\n Name             -  : ");
 		String name1 = scan.nextLine();
-		Data.address_book.add("Name          - " + name1);
+		Data.address_book.add(name1);
 
 		System.out.println();
 		System.out.println("\n Address          -  : ");
 		String address1 = scan.nextLine();
-		Data.address_book.add("Address       - " + address1);
+		Data.address_book.add(address1);
 		// DO NOT CONVERT THE E-MAIL ADDRESS AS IT IS CASE SENSITIVE !
 
 		System.out.println();
 		System.out.println("\n Sex              -  : ");
 		String sex1 = scan.nextLine();
-		Data.address_book.add("Sex           - " + sex1);
+		Data.address_book.add(sex1);
 
 		System.out.println();
 		System.out.println("\n Age              -  : ");
 		String age1 = scan.nextLine();
-		Data.address_book.add("Age           - " + age1);
+		Data.address_book.add(age1);
 
 		System.out.println();
 		System.out.println("\n Phone        - : ");
 		String phone1 = scan.nextLine();
-		Data.address_book.add("Phone         - " + phone1);
+		Data.address_book.add(phone1);
 
 		System.out.println();
 		System.out.println("\n Date of Birth    -  : ");
 		String birthday1 = scan.nextLine();
-		Data.address_book.add("Date of Birth - " + birthday1);
+		Data.address_book.add(birthday1);
 
 		// Date of File added by the system
 		System.out.println("\n Date of File  - ");
@@ -75,7 +75,7 @@ public class Add {
 		DateFormat df = new SimpleDateFormat(pattern);
 		Date today = Calendar.getInstance().getTime();
 		String date1 = df.format(today);
-		Data.address_book.add("Date of File  - " + date1);
+		Data.address_book.add(date1);
 
 		// this is debugging output and will be removed soon
 		System.out.println(name1 + address1 + sex1 + age1 + phone1 + birthday1 + date1);
@@ -86,7 +86,7 @@ public class Add {
 		System.out.println();
 		count++;
 		Data.setCount(count); 
-		scan.close();
+		//scan.close();
 		
 	}
 

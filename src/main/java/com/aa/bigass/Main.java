@@ -40,7 +40,5 @@ public class Main {
 		System.out.println("          You Will Now Return To The Console.");
 		// calling the FileOut java file to store the data
 		FileOut.fileOut();
-
 	}
-
 }

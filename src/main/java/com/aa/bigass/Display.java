@@ -38,10 +38,8 @@ public class Display {
 			poo = poo + 7;
 
 			// pausing for a prompt before outputting the next person
-			// System.console().readLine();
 			pause.nextLine();
 			System.out.println();
-
 		}
 		System.out.println("That was the last Entry.......");
 
@@ -49,8 +47,7 @@ public class Display {
 		System.out.println("You will now return to the MAIN MENU. ");
 		poo = 0;
 		sloo = 0;
-		pause.close();
+		// pause.close(); // keeps crashing if I add it ?
 
 	} // *********************** END DISPLAY FUNC. **********************
-
 }

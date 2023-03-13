@@ -1,6 +1,6 @@
 package com.aa.bigass;
 
-import java.io.IOException;
+//import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
@@ -12,7 +12,7 @@ public class Menu {
 		Data.setusers_choice(user_scan.nextInt());
 		// Data.setusers_choice(Integer.parseInt(System.console().readLine()));
 		int userChoice = Data.getusers_choice();
-		user_scan.close();
+		//user_scan.close();
 		System.out.println();
 
 		switch (userChoice) {
@@ -32,7 +32,7 @@ public class Menu {
 				break;
 			case 5:
 				// to exit the menu and system
-				user_scan.close();
+				//user_scan.close();
 				break;
 			default:
 				System.out.println("You Have Made An Incorrect Choice");
