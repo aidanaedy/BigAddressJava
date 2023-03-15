@@ -19,19 +19,19 @@ public class Display {
 
 		// looping through each persons name, age address etc.
 		while (sloo < (count + 1)) {
-			System.out.println(Data.address_book.get(poo));
+			System.out.println("Name             -  : " + Data.address_book.get(poo));
 
-			System.out.println(Data.address_book.get(poo + 1));
+			System.out.println("Address          -  : " + Data.address_book.get(poo + 1));
 
-			System.out.println(Data.address_book.get(poo + 2));
+			System.out.println("Sex              -  : " + Data.address_book.get(poo + 2));
 
-			System.out.println(Data.address_book.get(poo + 3));
+			System.out.println("Age              -  : " + Data.address_book.get(poo + 3));
 
-			System.out.println(Data.address_book.get(poo + 4));
+			System.out.println("Phone            -  : " + Data.address_book.get(poo + 4));
 
-			System.out.println(Data.address_book.get(poo + 5));
+			System.out.println("Date of Birth    -  : " + Data.address_book.get(poo + 5));
 
-			System.out.println(Data.address_book.get(poo + 6));
+			System.out.println("Date of File     -  : " + Data.address_book.get(poo + 6));
 
 			System.out.println("     Entry Number: " + sloo + ".......Are you ready for Another ?.......");
 			sloo++;
