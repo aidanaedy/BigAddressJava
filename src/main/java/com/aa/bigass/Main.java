@@ -17,7 +17,7 @@ public class Main {
 		int count = Data.getCount();
 
 		do {
-			System.out.println("The Database has " + count + " entries and first pass = " + first_pass);
+			System.out.println("The Database has " + count + " entries");
 			System.out.println();
 			System.out.println("*** Enter Your Choice of Menu ***");
 			System.out.println("    -------------------------    ");
