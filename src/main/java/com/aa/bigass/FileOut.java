@@ -13,7 +13,7 @@ public class FileOut {
 
 		try {
 			// open the file
-			BufferedWriter writer1 = new BufferedWriter(new FileWriter("output.txt"));
+			BufferedWriter writer1 = new BufferedWriter(new FileWriter("bigdos.in"));
 
 			// write the data
 			for (poo = 0; poo < Data.address_book.size(); poo++) {
