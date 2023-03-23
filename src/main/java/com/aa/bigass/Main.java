@@ -15,7 +15,7 @@ public class Main {
 			first_pass = 3;
 		}
 		int count = Data.getCount();
-
+// 				+ "*	 E-MAIL ADDRESS BOOK PROGRAM 		*\n"
 		do {
 			System.out.println("The Database has " + count + " entries");
 			System.out.println();
