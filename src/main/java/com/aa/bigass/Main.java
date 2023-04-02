@@ -15,17 +15,18 @@ public class Main {
 			first_pass = 3;
 		}
 		int count = Data.getCount();
-// 				+ "*	 E-MAIL ADDRESS BOOK PROGRAM 		*\n"
+		// + "* E-MAIL ADDRESS BOOK PROGRAM *\n"
 		do {
-			System.out.println("The Database has " + count + " entries");
-			System.out.println();
-			System.out.println("*** Enter Your Choice of Menu ***");
-			System.out.println("    -------------------------    ");
-			System.out.println("1.| To Add An Entry.");
-			System.out.println("2.| To Delete An Entry.");
-			System.out.println("3.| To Display All Entries.");
-			System.out.println("4.| To Goto Find Menu.");
-			System.out.println("5.| To Exit From The Program.");
+			System.out.println(
+					"The Database has " + count + " entries\n"
+							+ "\n"
+							+ "*** Enter Your Choice of Menu ***\n"
+							+ "    ------------------------- \n"
+							+ "1.| To Add An Entry.\n"
+							+ "2.| To Delete An Entry.\n"
+							+ "3.| To Display All Entries.\n"
+							+ "4.| To Goto Find Menu.\n"
+							+ "5.| To Exit From The Program.");
 			Menu.menu();
 
 		} while (Data.getusers_choice() != 5);
