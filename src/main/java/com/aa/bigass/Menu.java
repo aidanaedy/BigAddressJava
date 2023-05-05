@@ -22,6 +22,7 @@ public class Menu {
 				break;
 			case 2:
 				// delete function is to be added here
+				Delete.delete();
 				break;
 			case 3:
 				// display function to show all the entries
@@ -29,6 +30,7 @@ public class Menu {
 				break;
 			case 4:
 				// find menu function is to be added here
+				Find.find();
 				break;
 			case 5:
 				// to exit the menu and system
