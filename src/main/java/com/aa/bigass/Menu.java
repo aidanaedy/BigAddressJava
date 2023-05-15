@@ -32,9 +32,8 @@ public class Menu {
 				// find menu function is to be added here
 				Find.find();
 				break;
-			case 5:
+			case 9:
 				// to exit the menu and system
-				//user_scan.close();
 				break;
 			default:
 				System.out.println("You Have Made An Incorrect Choice");

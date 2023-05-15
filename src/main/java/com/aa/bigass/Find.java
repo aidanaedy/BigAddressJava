@@ -41,8 +41,6 @@ class Find {
 			break;
 		case 5:
 			// to exit the menu and system
-			//user_scan.close();
-			Main.main();
 			break;
 		default:
 			System.out.println("You Have Made An Incorrect Choice");

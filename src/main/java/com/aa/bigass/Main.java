@@ -26,12 +26,11 @@ public class Main {
 							+ "2.| To Delete An Entry.\n"
 							+ "3.| To Display All Entries.\n"
 							+ "4.| To Goto Find Menu.\n"
-							+ "5.| To Exit From The Program.");
+							+ "9.| To Exit From The Program.");
 			Menu.menu();
 
-		} while (Data.getusers_choice() != 5);
-		// when the choice is 5, exit the program
-		// while (users_choice != 5);
+		} while (Data.getusers_choice() != 9);
+		// when the choice is 9, exit the program
 
 		// ending messages etc.
 		System.out.println("         Thank You For Using The ADDRESS BOOK");
