@@ -8,10 +8,10 @@ public class Display {
 	// this method displays all the entries one person at a time
 	static void display() {
 		display_output();
-		System.out.println("That was the last Entry.......");
+		System.out.println("That Was The Last Entry.......");
 
 		// exiting back to the menu after the last entry
-		System.out.println("You will now return to the MAIN MENU. ");
+		System.out.println("You Will Now Return To The MAIN MENU. ");
 		// pause.close(); // keeps crashing if I add it ?
 
 	} // *********************** end of display method. **********************

@@ -13,21 +13,19 @@ public class Add {
 		/****************************************************************
 		 ********************** Add Function ********************
 		 ****************************************************************/
-		int groo;
-		int count = Data.getCount();
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println();
 		System.out.println("********************************************************");
-		System.out.println(Data.getCount());
+		System.out.println();
 		System.out.println();
 
-		groo = (count + 1);
+		// groo = (Data.getCount() + 1);
 
-		System.out.println("Please input the persons details for:-");
-		System.out.println("Name," + "Address," + "Sex," + "Age, ");
-		System.out.println("Phone Numbers" + " and Birthday. ");
-		System.out.println("This Is Entry # " + groo + " In Your Address Book.");
+		System.out.println("Please Input The Persons Details For:-");
+		System.out.println("Name, Address, Sex, Age, Phone and Date of Birth");
+		System.out.println();
+		System.out.println("This Is Entry # " + (Data.getCount() + 1) + " In Your Address Book.");
 
 		/*------------------------------------------------------------
 		              THIS IS THE MAIN INPUT SECTION
@@ -72,8 +70,8 @@ public class Add {
 		Data.addressBook.add(date1);
 
 		System.out.println("You Will Now Return To The MAIN MENU. \n\n");
-		count++;
-		Data.setCount(count);
+		// count++;
+		Data.setCount(Data.getCount() + 1);
 		// scan.close();
 
 	}

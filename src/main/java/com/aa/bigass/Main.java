@@ -17,9 +17,9 @@ public class Main {
 		// int count = Data.getCount();
 		do {
 			System.out.println(
-					"The Database has " + Data.getCount() + " entries\n"
+					"The Database Has " + Data.getCount() + " Entries\n"
 							+ "\n"
-							+ "*** Enter Your Choice of Menu ***\n"
+							+ "*** Enter Your Choice Of Menu ***\n"
 							+ "    ------------------------- \n"
 							+ "1.| To Add An Entry.\n"
 							+ "2.| To Delete An Entry.\n"

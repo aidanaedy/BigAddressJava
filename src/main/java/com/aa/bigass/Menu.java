@@ -8,7 +8,7 @@ public class Menu {
 	// to select one of the listed functions.
 	public static void menu() {
 		Scanner userScan = new Scanner(System.in);
-		System.out.println("Your Choice of Menu is:- #");
+		System.out.println("Your Choice Of Menu Is:- #");
 		Data.setUsersChoice(userScan.nextInt());
 		// Data.setusers_choice(Integer.parseInt(System.console().readLine()));
 		int userChoice = Data.getUsersChoice();
