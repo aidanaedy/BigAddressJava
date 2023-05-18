@@ -5,9 +5,9 @@ import java.util.ArrayList;
 /*********************** Class for counting START **********************/
 public class Data {
 	private static int count;
-	private static int users_choice;
+	private static int usersChoice;
 	// this has been moved to the data class to clean the main class
-	static ArrayList<String> address_book = new ArrayList<>();
+	static ArrayList<String> addressBook = new ArrayList<>();
 
 	// using getters and setters to use or keep the counter updated
 	public static int getCount() {
@@ -19,12 +19,12 @@ public class Data {
 	}
 
 	// using getters and setters to use or keep the users_choice updated
-	public static int getusers_choice() {
-		return Data.users_choice;
+	public static int getUsersChoice() {
+		return Data.usersChoice;
 	}
 
-	public static void setusers_choice(int users_choice) {
-		Data.users_choice = users_choice;
+	public static void setUsersChoice(int usersChoice) {
+		Data.usersChoice = usersChoice;
 	}
 
 }

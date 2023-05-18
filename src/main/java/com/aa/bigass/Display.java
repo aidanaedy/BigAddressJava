@@ -4,10 +4,8 @@ import java.util.Scanner;
 
 public class Display {
 
-	/*********************************************************************
-	 ************************* display method
-	 ************************/
-	// this method displays all the entries one person at a time until the last
+	/********************** display method **********************/
+	// this method displays all the entries one person at a time
 	static void display() {
 		display_output();
 		System.out.println("That was the last Entry.......");
@@ -23,22 +21,21 @@ public class Display {
 	static void display_output() {
 		int poo = 0;
 		int sloo = 1;
-		int count = Data.getCount();
 
 		Scanner pause = new Scanner(System.in);
 		System.out.println();
-		System.out.println("***   This is the " + sloo + " of " + count + " of your Address's stored.   ***");
+		System.out.println("|**   This Is The " + sloo + " Of " + Data.getCount() + " Of Your Address's Stored.   **|");
 
 		// looping through each persons name, age address etc.
-		while (sloo < (count + 1)) {
-			System.out.println("Name             -  : " + Data.address_book.get(poo));
-			System.out.println("Address          -  : " + Data.address_book.get(poo + 1));
-			System.out.println("Sex              -  : " + Data.address_book.get(poo + 2));
-			System.out.println("Age              -  : " + Data.address_book.get(poo + 3));
-			System.out.println("Phone            -  : " + Data.address_book.get(poo + 4));
-			System.out.println("Date of Birth    -  : " + Data.address_book.get(poo + 5));
-			System.out.println("Date of File     -  : " + Data.address_book.get(poo + 6));
-			System.out.println("     Entry Number: " + sloo + ".......Are you ready for Another ?.......");
+		while (sloo < (Data.getCount() + 1)) {
+			System.out.println("Name             -  : " + Data.addressBook.get(poo));
+			System.out.println("Address          -  : " + Data.addressBook.get(poo + 1));
+			System.out.println("Sex              -  : " + Data.addressBook.get(poo + 2));
+			System.out.println("Age              -  : " + Data.addressBook.get(poo + 3));
+			System.out.println("Phone            -  : " + Data.addressBook.get(poo + 4));
+			System.out.println("Date of Birth    -  : " + Data.addressBook.get(poo + 5));
+			System.out.println("Date of File     -  : " + Data.addressBook.get(poo + 6) + "\n");
+			System.out.println("|* That Was Entry No : " + sloo + ".  Are You Ready For Another ? *|");
 			sloo++;
 			poo = poo + 7;
 			// pausing for a prompt before outputting the next person

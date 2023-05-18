@@ -7,33 +7,33 @@ import java.io.IOException;
 class FileIn {
 	/*************************** FILE INPUT START **********************/
 	static void fileIn() {
-		int count = Data.getCount();
+		// int count = Data.getCount();
 		try {
 			// using BufferedReader to read in the file one line (entry) at a time
 			BufferedReader reader1 = new BufferedReader(new FileReader("bigdos.in"));
 			for (String setName1 = reader1.readLine(); setName1 != null; setName1 = reader1.readLine()) {
-				Data.address_book.add(setName1);
+				Data.addressBook.add(setName1);
 
 				String setAddress1 = reader1.readLine();
-				Data.address_book.add(setAddress1);
+				Data.addressBook.add(setAddress1);
 
 				String setSex1 = reader1.readLine();
-				Data.address_book.add(setSex1);
+				Data.addressBook.add(setSex1);
 
 				String setAge1 = reader1.readLine();
-				Data.address_book.add(setAge1);
+				Data.addressBook.add(setAge1);
 
 				String setPhone1 = reader1.readLine();
-				Data.address_book.add(setPhone1);
+				Data.addressBook.add(setPhone1);
 
 				String setBirthday1 = reader1.readLine();
-				Data.address_book.add(setBirthday1);
+				Data.addressBook.add(setBirthday1);
 
 				String setDate1 = reader1.readLine();
-				Data.address_book.add(setDate1);
+				Data.addressBook.add(setDate1);
 
 				// and then increment the counter for each additional entry
-				count = count + 1;
+				Data.setCount(Data.getCount() + 1);
 			}
 			// close the reader when done
 			reader1.close();
@@ -43,7 +43,7 @@ class FileIn {
 		} catch (NullPointerException e) {
 			e.printStackTrace();
 		}
-		Data.setCount(count);
+		// Data.setCount(count);
 	}
 }
 /***************************************************************

@@ -2,11 +2,9 @@ package com.aa.bigass;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-//import java.time.ZonedDateTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
-
 
 public class Add {
 
@@ -17,8 +15,6 @@ public class Add {
 		 ****************************************************************/
 		int groo;
 		int count = Data.getCount();
-		//String get;
-		//ZonedDateTime dateTime = ZonedDateTime.now();
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println();
@@ -41,53 +37,44 @@ public class Add {
 
 		System.out.println("\n Name             -  : ");
 		String name1 = scan.nextLine();
-		Data.address_book.add(name1);
+		Data.addressBook.add(name1);
 
 		System.out.println();
 		System.out.println("\n Address          -  : ");
 		String address1 = scan.nextLine();
-		Data.address_book.add(address1);
-		// DO NOT CONVERT THE E-MAIL ADDRESS AS IT IS CASE SENSITIVE !
+		Data.addressBook.add(address1);
 
 		System.out.println();
 		System.out.println("\n Sex              -  : ");
 		String sex1 = scan.nextLine();
-		Data.address_book.add(sex1);
+		Data.addressBook.add(sex1);
 
 		System.out.println();
 		System.out.println("\n Age              -  : ");
 		String age1 = scan.nextLine();
-		Data.address_book.add(age1);
+		Data.addressBook.add(age1);
 
 		System.out.println();
 		System.out.println("\n Phone        - : ");
 		String phone1 = scan.nextLine();
-		Data.address_book.add(phone1);
+		Data.addressBook.add(phone1);
 
 		System.out.println();
 		System.out.println("\n Date of Birth    -  : ");
 		String birthday1 = scan.nextLine();
-		Data.address_book.add(birthday1);
+		Data.addressBook.add(birthday1);
 
-		// Date of File added by the system
-		System.out.println("\n Date of File  - ");
+		// Date of File added by the system so no need to display on the screen
 		String pattern = "dd/MM/yy HH:mm:ss";
 		DateFormat df = new SimpleDateFormat(pattern);
 		Date today = Calendar.getInstance().getTime();
 		String date1 = df.format(today);
-		Data.address_book.add(date1);
+		Data.addressBook.add(date1);
 
-		// this is debugging output and will be removed soon
-		System.out.println(name1 + address1 + sex1 + age1 + phone1 + birthday1 + date1);
-		System.out.println(Data.address_book);
-
-		System.out.println("You will now return to the MAIN MENU. ");
-		System.out.println();
-		System.out.println();
+		System.out.println("You Will Now Return To The MAIN MENU. \n\n");
 		count++;
-		Data.setCount(count); 
-		//scan.close();
-		
-	}
+		Data.setCount(count);
+		// scan.close();
 
+	}
 }

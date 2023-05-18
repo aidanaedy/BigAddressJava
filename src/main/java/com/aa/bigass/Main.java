@@ -3,22 +3,21 @@ package com.aa.bigass;
 import java.io.IOException;
 
 public class Main {
-	static int first_pass;
+	static int firstPass;
 
 	public static void main(String[] args) throws IOException {
 
-		if (first_pass < 1) {
+		if (firstPass < 1) {
 			// calling the FileIn java file to read the stored data
 			FileIn.fileIn();
 			// calling the Credits java file to display the credits at the start
 			Credits.credits();
-			first_pass = 3;
+			firstPass = 3;
 		}
-		int count = Data.getCount();
-		// + "* E-MAIL ADDRESS BOOK PROGRAM *\n"
+		// int count = Data.getCount();
 		do {
 			System.out.println(
-					"The Database has " + count + " entries\n"
+					"The Database has " + Data.getCount() + " entries\n"
 							+ "\n"
 							+ "*** Enter Your Choice of Menu ***\n"
 							+ "    ------------------------- \n"
@@ -29,7 +28,7 @@ public class Main {
 							+ "9.| To Exit From The Program.");
 			Menu.menu();
 
-		} while (Data.getusers_choice() != 9);
+		} while (Data.getUsersChoice() != 9);
 		// when the choice is 9, exit the program
 
 		// ending messages etc.

@@ -15,8 +15,8 @@ public class FileOut {
 			BufferedWriter writer1 = new BufferedWriter(new FileWriter("bigdos.in"));
 
 			// write the data
-			for (poo = 0; poo < Data.address_book.size(); poo++) {
-				writer1.append(Data.address_book.get(poo) + "\n");
+			for (poo = 0; poo < Data.addressBook.size(); poo++) {
+				writer1.append(Data.addressBook.get(poo) + "\n");
 			}
 			// close the writer
 			writer1.close();

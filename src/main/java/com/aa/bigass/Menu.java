@@ -7,12 +7,12 @@ public class Menu {
 
 	// to select one of the listed functions.
 	public static void menu() {
-		Scanner user_scan = new Scanner(System.in);
+		Scanner userScan = new Scanner(System.in);
 		System.out.println("Your Choice of Menu is:- #");
-		Data.setusers_choice(user_scan.nextInt());
+		Data.setUsersChoice(userScan.nextInt());
 		// Data.setusers_choice(Integer.parseInt(System.console().readLine()));
-		int userChoice = Data.getusers_choice();
-		//user_scan.close();
+		int userChoice = Data.getUsersChoice();
+		// user_scan.close();
 		System.out.println();
 
 		switch (userChoice) {

@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Find {
 	public static void find() {
 
-		Scanner user_scan = new Scanner(System.in);
+		Scanner userScan = new Scanner(System.in);
 		System.out.println("Your Choice of Find Menu is:- #");
 		System.out.println(
 				"*** Enter The Type Of Find You Require ***\n"
@@ -15,9 +15,9 @@ class Find {
 						+ " 3.| To Find Persons That Are A Certain Age.\n"
 						+ " 4.| To Find Persons With A Phone Number.\n"
 						+ " 5.| To Exit From The Find Menu.\n");
-		Data.setusers_choice(user_scan.nextInt());
+		Data.setUsersChoice(userScan.nextInt());
 		// Data.setusers_choice(Integer.parseInt(System.console().readLine()));
-		int userChoice = Data.getusers_choice();
+		int userChoice = Data.getUsersChoice();
 		// user_scan.close();
 		System.out.println();
 
@@ -49,24 +49,24 @@ class Find {
 	private static void named() {
 		// To Find a person by their name
 
-		int length1 = Data.address_book.size();
+		int length1 = Data.addressBook.size();
 		@SuppressWarnings("resource")
-		Scanner user_scan2 = new Scanner(System.in);
+		Scanner userScan2 = new Scanner(System.in);
 		System.out.println("Please Enter The Persons Name To Search For -  ");
-		String new1 = user_scan2.nextLine().toUpperCase();
+		String new1 = userScan2.nextLine().toUpperCase();
 		System.out.println(new1 + " Is The Name We Are Searching For");
 
 		for (int i = 0; i < length1; i += 7) {
-			if (new1.contentEquals(Data.address_book.get(i).toUpperCase())) {
+			if (new1.contentEquals(Data.addressBook.get(i).toUpperCase())) {
 				System.out.println(
 						""
-								+ "          Name          - " + Data.address_book.get(i) + "\n"
-								+ "          Address       - " + Data.address_book.get(i + 1) + "\n"
-								+ "          Sex           - " + Data.address_book.get(i + 2) + "\n"
-								+ "          Age           - " + Data.address_book.get(i + 3) + "\n"
-								+ "          Phone         - " + Data.address_book.get(i + 4) + "\n"
-								+ "          Date of Birth - " + Data.address_book.get(i + 5) + "\n"
-								+ "          Date of Entry - " + Data.address_book.get(i + 6) + "\n");
+								+ "          Name          - " + Data.addressBook.get(i) + "\n"
+								+ "          Address       - " + Data.addressBook.get(i + 1) + "\n"
+								+ "          Sex           - " + Data.addressBook.get(i + 2) + "\n"
+								+ "          Age           - " + Data.addressBook.get(i + 3) + "\n"
+								+ "          Phone         - " + Data.addressBook.get(i + 4) + "\n"
+								+ "          Date of Birth - " + Data.addressBook.get(i + 5) + "\n"
+								+ "          Date of Entry - " + Data.addressBook.get(i + 6) + "\n");
 			}
 		}
 		System.out.println("\n We Have Finished Looking And Found No More \n");
@@ -75,25 +75,25 @@ class Find {
 	private static void age() {
 		// To Find a person by their age
 
-		int length1 = Data.address_book.size();
+		int length1 = Data.addressBook.size();
 
 		@SuppressWarnings("resource")
-		Scanner user_scan3 = new Scanner(System.in);
+		Scanner userScan3 = new Scanner(System.in);
 		System.out.println("Please Enter The Persons Age To Search For -  ");
-		String new2 = user_scan3.nextLine().toUpperCase();
+		String new2 = userScan3.nextLine().toUpperCase();
 		System.out.println(new2 + " Is The Age We Are Searching For");
 
 		for (int i = 0; i < length1; i += 7) {
-			if (new2.contentEquals(Data.address_book.get(i + 3).toUpperCase())) {
+			if (new2.contentEquals(Data.addressBook.get(i + 3).toUpperCase())) {
 				System.out.println(
 						""
-								+ "          Name          - " + Data.address_book.get(i) + "\n"
-								+ "          Address       - " + Data.address_book.get(i + 1) + "\n"
-								+ "          Sex           - " + Data.address_book.get(i + 2) + "\n"
-								+ "          Age           - " + Data.address_book.get(i + 3) + "\n"
-								+ "          Phone         - " + Data.address_book.get(i + 4) + "\n"
-								+ "          Date of Birth - " + Data.address_book.get(i + 5) + "\n"
-								+ "          Date of Entry - " + Data.address_book.get(i + 6) + "\n");
+								+ "          Name          - " + Data.addressBook.get(i) + "\n"
+								+ "          Address       - " + Data.addressBook.get(i + 1) + "\n"
+								+ "          Sex           - " + Data.addressBook.get(i + 2) + "\n"
+								+ "          Age           - " + Data.addressBook.get(i + 3) + "\n"
+								+ "          Phone         - " + Data.addressBook.get(i + 4) + "\n"
+								+ "          Date of Birth - " + Data.addressBook.get(i + 5) + "\n"
+								+ "          Date of Entry - " + Data.addressBook.get(i + 6) + "\n");
 			}
 		}
 		System.out.println("\n We Have Finished Looking And Found No More \n");
@@ -102,24 +102,24 @@ class Find {
 	private static void phone() {
 		// To Find a person by their phone number
 
-		int length1 = Data.address_book.size();
+		int length1 = Data.addressBook.size();
 		@SuppressWarnings("resource")
-		Scanner user_scan4 = new Scanner(System.in);
+		Scanner userScan4 = new Scanner(System.in);
 		System.out.println("Please Enter The Persons Phone Number To Search For -  ");
-		String new3 = user_scan4.nextLine().toUpperCase();
+		String new3 = userScan4.nextLine().toUpperCase();
 		System.out.println(new3 + " Is The Number We Are Searching For");
 
 		for (int i = 0; i < length1; i += 7) {
-			if (new3.contentEquals(Data.address_book.get(i + 4).toUpperCase())) {
+			if (new3.contentEquals(Data.addressBook.get(i + 4).toUpperCase())) {
 				System.out.println(
 						""
-								+ "          Name          - " + Data.address_book.get(i) + "\n"
-								+ "          Address       - " + Data.address_book.get(i + 1) + "\n"
-								+ "          Sex           - " + Data.address_book.get(i + 2) + "\n"
-								+ "          Age           - " + Data.address_book.get(i + 3) + "\n"
-								+ "          Phone         - " + Data.address_book.get(i + 4) + "\n"
-								+ "          Date of Birth - " + Data.address_book.get(i + 5) + "\n"
-								+ "          Date of Entry - " + Data.address_book.get(i + 6) + "\n");
+								+ "          Name          - " + Data.addressBook.get(i) + "\n"
+								+ "          Address       - " + Data.addressBook.get(i + 1) + "\n"
+								+ "          Sex           - " + Data.addressBook.get(i + 2) + "\n"
+								+ "          Age           - " + Data.addressBook.get(i + 3) + "\n"
+								+ "          Phone         - " + Data.addressBook.get(i + 4) + "\n"
+								+ "          Date of Birth - " + Data.addressBook.get(i + 5) + "\n"
+								+ "          Date of Entry - " + Data.addressBook.get(i + 6) + "\n");
 			}
 		}
 		System.out.println("\n We Have Finished Looking And Found No More \n");
@@ -128,24 +128,24 @@ class Find {
 	private static void birthday() {
 		// To Find a person by their birthday
 
-		int length1 = Data.address_book.size();
+		int length1 = Data.addressBook.size();
 		@SuppressWarnings("resource")
-		Scanner user_scan5 = new Scanner(System.in);
+		Scanner userScan5 = new Scanner(System.in);
 		System.out.println("Please Enter The Persons Birthdate To Search For -  ");
-		String new4 = user_scan5.nextLine().toUpperCase();
+		String new4 = userScan5.nextLine().toUpperCase();
 		System.out.println(new4 + " Is The Birthdate We Are Searching For");
 
 		for (int i = 0; i < length1; i += 7) {
-			if (new4.contentEquals(Data.address_book.get(i + 5).toUpperCase())) {
+			if (new4.contentEquals(Data.addressBook.get(i + 5).toUpperCase())) {
 				System.out.println(
 						""
-								+ "          Name          - " + Data.address_book.get(i) + "\n"
-								+ "          Address       - " + Data.address_book.get(i + 1) + "\n"
-								+ "          Sex           - " + Data.address_book.get(i + 2) + "\n"
-								+ "          Age           - " + Data.address_book.get(i + 3) + "\n"
-								+ "          Phone         - " + Data.address_book.get(i + 4) + "\n"
-								+ "          Date of Birth - " + Data.address_book.get(i + 5) + "\n"
-								+ "          Date of Entry - " + Data.address_book.get(i + 6) + "\n");
+								+ "          Name          - " + Data.addressBook.get(i) + "\n"
+								+ "          Address       - " + Data.addressBook.get(i + 1) + "\n"
+								+ "          Sex           - " + Data.addressBook.get(i + 2) + "\n"
+								+ "          Age           - " + Data.addressBook.get(i + 3) + "\n"
+								+ "          Phone         - " + Data.addressBook.get(i + 4) + "\n"
+								+ "          Date of Birth - " + Data.addressBook.get(i + 5) + "\n"
+								+ "          Date of Entry - " + Data.addressBook.get(i + 6) + "\n");
 			}
 		}
 		System.out.println("\n We Have Finished Looking And Found No More \n");
