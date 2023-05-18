@@ -33,8 +33,8 @@ public class Display {
 			System.out.println("Sex              -  : " + Data.addressBook.get(poo + 2));
 			System.out.println("Age              -  : " + Data.addressBook.get(poo + 3));
 			System.out.println("Phone            -  : " + Data.addressBook.get(poo + 4));
-			System.out.println("Date of Birth    -  : " + Data.addressBook.get(poo + 5));
-			System.out.println("Date of File     -  : " + Data.addressBook.get(poo + 6) + "\n");
+			System.out.println("Date Of Birth    -  : " + Data.addressBook.get(poo + 5));
+			System.out.println("Date Of File     -  : " + Data.addressBook.get(poo + 6) + "\n");
 			System.out.println("|* That Was Entry No : " + sloo + ".  Are You Ready For Another ? *|");
 			sloo++;
 			poo = poo + 7;

@@ -23,7 +23,7 @@ public class Add {
 		// groo = (Data.getCount() + 1);
 
 		System.out.println("Please Input The Persons Details For:-");
-		System.out.println("Name, Address, Sex, Age, Phone and Date of Birth");
+		System.out.println("Name, Address, Sex, Age, Phone and Date Of Birth");
 		System.out.println();
 		System.out.println("This Is Entry # " + (Data.getCount() + 1) + " In Your Address Book.");
 
@@ -58,7 +58,7 @@ public class Add {
 		Data.addressBook.add(phone1);
 
 		System.out.println();
-		System.out.println("\n Date of Birth    -  : ");
+		System.out.println("\n Date Of Birth    -  : ");
 		String birthday1 = scan.nextLine();
 		Data.addressBook.add(birthday1);
 
