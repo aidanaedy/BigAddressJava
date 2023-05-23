@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Delete {
 	public static void delete() {
 		// To Find a person by their name
-		// getting the size of the address book for ocal comparison
+		// getting the size of the address book for local comparison
 		int lengthAddress = Data.addressBook.size();
 		String yes = "Y";
 
